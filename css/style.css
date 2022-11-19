@@ -36,7 +36,7 @@ ul {
 }
 
 .active a {
-    color: var(--color-DownStripe);
+    color: rgb(148, 74, 9);
     text-decoration: underline;
     font-weight: bold;
 }
@@ -48,9 +48,21 @@ ul {
     left: 0px;
     top: 0px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
     padding: 20px;
     color: var(--color-text-1);
+    
+}
+
+.logo{
+    border-bottom: 2px solid rgb(148, 74, 9);;
+}
+
+.logo span{
+    color:  rgb(148, 74, 9)  ;
+    font-weight: bold;  
+
 }
 
 .nav_links {
@@ -97,7 +109,8 @@ header {
 .line {
     width: 150px;
     height: 4px;
-    background-color: var(--color-DownStripe);
+    background: rgb(36,0,0);
+    background: linear-gradient(90deg, rgba(36,0,0,1) 0%, rgba(121,61,9,1) 37%, rgba(255,157,0,1) 100%);
     margin: 10px auto;
     border-radius: 5px;
 }
@@ -110,7 +123,8 @@ header {
 
 .ctn {
     padding: 8px 15px;
-    background: var(--color-DownStripe);
+    background: rgb(36,0,0);
+    background: linear-gradient(90deg, rgb(95, 2, 2) 0%, rgb(131, 59, 5) 37%, rgba(255,157,0,1) 100%);
     border-radius: 30px;
     color: var(--color-text-1);
     transition: all 0.4s;
@@ -120,11 +134,11 @@ header {
     box-shadow: 0px 0px 8px rgb(105, 6, 6);
 }
 
-.activeA:hover{
-    border-bottom: 2px solid var(--color-DownStripe);
+.activeA:hover {
+    border-bottom: 2px solid rgb(148, 74, 9);;
 }
 
-.active a:hover{
+.active a:hover {
     color: var(--color-text-1);
 }
 
@@ -147,6 +161,7 @@ header {
 
 section {
     width: 80%;
+    height: 35rem;
     margin: 80px auto;
 }
 
@@ -253,7 +268,7 @@ section {
 }
 
 .tours .img-gallery img {
-    width: 40%;   
+    width: 40%;
     margin: 10px;
 }
 
@@ -280,13 +295,13 @@ section {
 
 /* ==================== Footer events =================== */
 
-.footer {
-    position: absolute;
+.footer {    
     width: 100%;
     min-height: 100px;
     padding: 20px 88px;
     margin: 0px;
-    background-color: var(--fondo-background);
+    background: rgb(36, 0, 0);
+    background: linear-gradient(90deg, rgba(36, 0, 0, 1) 0%, rgba(121, 61, 9, 1) 37%, rgba(255, 157, 0, 1) 100%);
     text-align: center;
 }
 
@@ -299,7 +314,7 @@ section {
 
 /* ==================== Mobile Device =================== */
 
-@media  (max-width: 850px) {
+@media (max-width: 850px) {
     .menu_btn {
         display: block;
     }
@@ -319,13 +334,19 @@ section {
         width: 100%;
         height: 100vh;
         justify-content: center;
-        background-color: var(--fondo-background);
-        margin-top: -920px;
+
+        margin-top: -1020px;
         transition: all 0.5s;
-        box-shadow: 0px 4px 5px var(--color-DownStripe);
+
+    }
+
+    section {        
+        height: 58rem;       
     }
 
     .mobile_menu {
+        background: rgb(36, 0, 0);
+        background: linear-gradient(90deg, rgba(36, 0, 0, 1) 0%, rgba(121, 61, 9, 1) 37%, rgba(255, 157, 0, 1) 100%);
         margin-top: 0px;
         border-bottom-right-radius: 30%;
     }
@@ -361,22 +382,24 @@ section {
         align-items: center;
     }
 
-    .tours .img-gallery  img {
-        width: 100% ;
+    .tours .img-gallery img {
+        width: 100%;
     }
 
-    .footer{
-        padding: 10px;
-    
+    .footer {
+        padding: 0px;
+        position: absolute;
+      
+
     }
 }
 
 /* =============== Animations ================ */
 
-img{
+img {
     transition: transform .2s ease;
 }
 
-img:hover{
+img:hover {
     transform: scale(1.1);
 }
