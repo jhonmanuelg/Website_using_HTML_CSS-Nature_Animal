@@ -160,8 +160,7 @@ header {
 /* ================== Events content ================== */
 
 section {
-    width: 80%;
-    height: 35rem;
+    width: 80%;    
     margin: 80px auto;
 }
 
@@ -180,7 +179,7 @@ section {
 }
 
 .row .col {
-    height: 330px;
+    height: 405px;;
     margin: 5px;
     display: flex;
     flex-direction: column;
@@ -340,9 +339,7 @@ section {
 
     }
 
-    section {        
-        height: 58rem;       
-    }
+    
 
     .mobile_menu {
         background: rgb(36, 0, 0);
@@ -388,8 +385,7 @@ section {
 
     .footer {
         padding: 0px;
-        position: absolute;
-      
+        position: absolute;    
 
     }
 }
