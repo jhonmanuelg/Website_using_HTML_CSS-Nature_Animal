@@ -11,8 +11,15 @@
     --font-family: 'Dosis', sans-serif;
     --color-text-1: #fff;
     --color-DownStripe: #fc1a1a;
-    --color-text-2: rgb(47, 46, 46);
-    --fondo-background: rgb(28, 150, 169) ;
+    --color-text-2: rgb(6, 46, 78);
+    --fondo-background: #d08700;
+    --fondo-card: rgba(52, 121, 48, 0.305);
+}
+
+body,
+html {
+    /* elimina scroll de lado */
+    overflow-x: hidden;
 }
 
 /* ====================== Navbar ==================== */
@@ -60,8 +67,8 @@ ul {
 
 header {
     /* para respon */
-    width: 99vw;
-    height: 99vh;
+    width: 100vw;
+    height: 100vh;
     /* ===== */
     background-image: url("../img/leopardo.png");
     background-position: bottom;
@@ -103,10 +110,19 @@ header {
     background: var(--color-DownStripe);
     border-radius: 30px;
     color: var(--color-text-1);
+    transition: all 0.4s;
 }
 
 .ctn:hover {
-    box-shadow: 0px 0px 4px rgb(38, 18, 2);
+    box-shadow: 0px 0px 8px rgb(105, 6, 6);
+}
+
+.activeA:hover{
+    border-bottom: 2px solid var(--color-DownStripe);
+}
+
+.active a:hover{
+    color: var(--color-text-1);
 }
 
 .menu_btn {
@@ -115,38 +131,248 @@ header {
     right: 30px;
     top: 30px;
     cursor: pointer;
+    display: none;
 }
 
-.menu_btn:hover{
+.menu_btn:hover {
     border-radius: 5px;
-    box-shadow: 0px 0px 4px rgb(2, 16, 104);
+    box-shadow: 0px 0px 4px rgb(105, 6, 6);
+
+}
+
+/* ================== Events content ================== */
+
+section {
+    width: 80%;
+    margin: 80px auto;
+}
+
+.title {
+    text-align: center;
+    font-size: 4vmin;
+    color: var(--color-text-2);
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.row .col {
+    height: 330px;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.row .col img {
+    width: 80%;
+}
+
+.events .row {
+    margin-top: 50px;
+}
+
+.col h4 {
+    font-size: 3vmin;
+    color: var(--color-text-2);
+    margin: 20px auto;
+}
+
+.col p {
+    color: var(--color-text-2);
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* ================== explore events ================ */
+
+.explore {
+    width: 100%;
+    height: 100vh;
+    background-image: url("../img/camalion.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.explore-content {
+    width: 80%;
+    padding: 50px;
+    background-color: rgba(37, 37, 37, 0.436);
+    opacity: 1.0;
+    color: var(--color-text-1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.explore-content h1 {
+    text-align: center;
+    font-size: 7vmin;
+    margin: 50px;
+}
+
+.explore-content .line {
+    margin-top: -44px;
+    margin-bottom: 50px;
+}
+
+.explore-content p {
+    color: var(--color-text-1);
+    margin-bottom: 40px;
+
+}
+
+/* ================== Tours events ================ */
+
+.content-col {
+    width: 40%;
+    justify-content: center;
+}
+
+.img-col {
+    width: 60%;
+}
+
+.row .img-gallery {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tours .img-gallery img {
+    width: 40%;   
+    margin: 10px;
+}
+
+.content-col h1 {
+    font-size: 7vmin;
+    color: var(--color-text-2);
+}
+
+.content-col .line {
+    margin-left: -1px;
+}
+
+.content-col p {
+    padding: 0px;
+    margin: 30px auto;
+    color: var(--color-text-2);
+}
+
+.content-col .ctn {
+    margin-left: -100px;
+}
+
+
+
+/* ==================== Footer events =================== */
+
+.footer {
+    position: absolute;
+    width: 100%;
+    min-height: 100px;
+    padding: 20px 88px;
+    margin: 0px;
+    background-color: var(--fondo-background);
+    text-align: center;
+}
+
+.footer p {
+    color: var(--color-text-1);
+    margin: 20px auto;
+    padding: 20px auto;
 }
 
 /* ==================== Mobile Device =================== */
 
-@media only screen and (max-width: 850px){
-    .navbar{
+@media  (max-width: 850px) {
+    .menu_btn {
+        display: block;
+    }
+
+    .navbar {
         padding: 0px;
     }
-    .logo{
+
+    .logo {
         position: absolute;
         top: 30px;
         left: 30px;
     }
-    .nav_links{
+
+    .nav_links {
         flex-direction: column;
         width: 100%;
         height: 100vh;
         justify-content: center;
         background-color: var(--fondo-background);
-        margin-top:-900px ;
+        margin-top: -920px;
+        transition: all 0.5s;
+        box-shadow: 0px 4px 5px var(--color-DownStripe);
     }
 
-    .mobile_menu{
-        margin-top: 0px ;
+    .mobile_menu {
+        margin-top: 0px;
+        border-bottom-right-radius: 30%;
     }
 
-    .nav_links li{
+    .nav_links li {
         margin: 30px auto;
     }
+
+    /* ============= events ========== */
+    .row {
+        flex-direction: column;
+    }
+
+    .row .col {
+        margin: 40px auto;
+    }
+
+    .col img {
+        max-width: 90%;
+    }
+
+    /* ================ Explore =============== */
+    .explore-content {
+        width: 100%;
+    }
+
+    .tours .col {
+        width: 100%;
+    }
+
+    .img-gallery {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .tours .img-gallery  img {
+        width: 100% ;
+    }
+
+    .footer{
+        padding: 10px;
+    
+    }
+}
+
+/* =============== Animations ================ */
+
+img{
+    transition: transform .2s ease;
+}
+
+img:hover{
+    transform: scale(1.1);
 }
