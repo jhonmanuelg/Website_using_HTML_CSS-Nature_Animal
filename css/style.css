@@ -16,8 +16,19 @@
     --fondo-card: rgba(52, 121, 48, 0.305);
 }
 
+.body::-webkit-scrollbar {
+    width: 15px;    
+    background:  #ED9002;  
+}
+
+.body::-webkit-scrollbar-thumb{
+   border-radius: 9px;
+background: linear-gradient(90deg, rgb(224, 89, 6) 0%, rgba(121,61,9,1) 6%, rgba(255, 157, 0, 0.386) 100%);
+}
+
 body,
 html {
+
     font-family: 'Dosis';
     /* elimina scroll de lado */
     overflow-x: hidden;
@@ -54,16 +65,17 @@ ul {
     align-items: center;
     padding: 20px;
     color: var(--color-text-1);
-    
+
 }
 
-.logo{
-    border-bottom: 2px solid rgb(148, 74, 9);;
+.logo {
+    border-bottom: 2px solid rgb(148, 74, 9);
+    ;
 }
 
-.logo span{
-    color:  rgb(148, 74, 9);
-    font-weight: bold;  
+.logo span {
+    color: rgb(148, 74, 9);
+    font-weight: bold;
 
 }
 
@@ -102,7 +114,7 @@ header {
     text-align: center;
 }
 
-.header_content h2 {      
+.header_content h2 {
     /* para respon */
     font-size: 7vmin;
     /* ==== */
@@ -111,8 +123,8 @@ header {
 .line {
     width: 150px;
     height: 4px;
-    background: rgb(36,0,0);
-    background: linear-gradient(90deg, rgba(36,0,0,1) 0%, rgba(121,61,9,1) 37%, rgba(255,157,0,1) 100%);
+    background: rgb(36, 0, 0);
+    background: linear-gradient(90deg, rgba(36, 0, 0, 1) 0%, rgba(121, 61, 9, 1) 37%, rgba(255, 157, 0, 1) 100%);
     margin: 10px auto;
     border-radius: 5px;
 }
@@ -125,8 +137,8 @@ header {
 
 .ctn {
     padding: 8px 15px;
-    background: rgb(36,0,0);
-    background: linear-gradient(90deg, rgb(95, 2, 2) 0%, rgb(131, 59, 5) 37%, rgba(255,157,0,1) 100%);
+    background: rgb(36, 0, 0);
+    background: linear-gradient(90deg, rgb(95, 2, 2) 0%, rgb(131, 59, 5) 37%, rgba(255, 157, 0, 1) 100%);
     border-radius: 30px;
     color: var(--color-text-1);
     transition: all 0.4s;
@@ -138,7 +150,8 @@ header {
 
 .activeA a:hover {
     color: rgb(148, 74, 9) !important;
-    border-bottom: 2px solid rgb(148, 74, 9);;
+    border-bottom: 2px solid rgb(148, 74, 9);
+    ;
 }
 
 .active a:hover {
@@ -163,7 +176,7 @@ header {
 /* ================== Events content ================== */
 
 section {
-    width: 80%;    
+    width: 80%;
     margin: 80px auto;
 }
 
@@ -182,7 +195,8 @@ section {
 }
 
 .row .col {
-    height: 405px;;
+    height: 405px;
+    ;
     margin: 5px;
     display: flex;
     flex-direction: column;
@@ -252,26 +266,17 @@ section {
 }
 
 /* ================== Tours events ================ */
+.row-tours {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
 
 .content-col {
     width: 40%;
     justify-content: center;
-}
-
-.img-col {
-    width: 60%;
-}
-
-.row .img-gallery {
-    width: 100%;
     align-items: center;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.tours .img-gallery img {
-    width: 40%;
-    margin: 10px;
 }
 
 .content-col h1 {
@@ -290,14 +295,26 @@ section {
 }
 
 .content-col .ctn {
-    margin-left: -100px;
+    margin-left: 5px;
+}
+
+.img-tours {
+    width: 490px;
+    height: 300px;
+    display: block;
+
+}
+
+.img-tours-galery {
+    width: 13rem;
+    margin: 9px;
 }
 
 
 
 /* ==================== Footer events =================== */
 
-.footer {    
+.footer {
     width: 100%;
     min-height: 100px;
     padding: 20px 88px;
@@ -315,8 +332,16 @@ section {
 }
 
 /* ==================== Mobile Device =================== */
+@media (max-width: 950px) {
+    .content-col h1 {
+        font-size: 5vmin;
+
+    }
+}
+
 
 @media (max-width: 850px) {
+
     .menu_btn {
         display: block;
     }
@@ -342,8 +367,6 @@ section {
 
     }
 
-    
-
     .mobile_menu {
         background: rgb(36, 0, 0);
         background: linear-gradient(90deg, rgba(36, 0, 0, 1) 0%, rgba(121, 61, 9, 1) 37%, rgba(255, 157, 0, 1) 100%);
@@ -368,6 +391,7 @@ section {
         max-width: 90%;
     }
 
+
     /* ================ Explore =============== */
     .explore-content {
         width: 100%;
@@ -377,20 +401,55 @@ section {
         width: 100%;
     }
 
-    .img-gallery {
-        justify-content: center;
-        align-items: center;
+    .img-tours {
+        width: 349px;
+        height: 208px;
     }
 
-    .tours .img-gallery img {
-        width: 100%;
+    .img-tours-galery {
+        width: 9rem;
+
     }
 
     .footer {
+
         padding: 0px;
-        position: absolute;    
+        position: absolute;
 
     }
+}
+
+@media (max-width: 850px) {
+    .content-col h1 {
+        font-size: 7vmin;
+
+    }
+}
+
+@media (max-width: 430px) {
+    .events .row {
+        margin-top: 10px;
+    }
+
+    .row .col {
+        height: 270px;
+    }
+
+    .row {
+        margin-top: -6rem;
+
+    }
+
+    .content-col p {
+
+        margin-left: -2rem;
+    }
+
+    .img-tours {
+        margin-left: -1.4rem;
+
+    }
+
 }
 
 /* =============== Animations ================ */
