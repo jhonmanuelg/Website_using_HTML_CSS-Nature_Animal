@@ -346,7 +346,7 @@ section {
 
 .footer p i{
     width: 15px;
-    margin: 6px;
+    margin: 12px;
 }
 
 /* ==================== Mobile Device =================== */
@@ -473,6 +473,13 @@ section {
 }
 
 /* =============== Animations ================ */
+.footer p i {
+    transition: transform .2s ease;
+}
+
+.footer p i:hover {
+    transform: scale(1.2);
+} 
 
 img {
     transition: transform .2s ease;
