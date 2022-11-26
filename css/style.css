@@ -348,6 +348,7 @@ section {
 }
 
 .footer p i{
+    cursor: pointer;
     width: 15px;
     margin: 12px;
 }
