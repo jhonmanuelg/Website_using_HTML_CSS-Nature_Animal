@@ -348,7 +348,7 @@ section {
     font-size: 1.5em;
     color: var(--color-text-1);
     margin: 10px auto;
-   
+
     align-items: center;
 }
 
@@ -472,7 +472,7 @@ section {
     }
 
     .row .col {
-        height: 270px;
+        height: 365px;
     }
 
     .row {
@@ -481,12 +481,12 @@ section {
     }
 
     .content-col p {
-
-        margin-left: -2rem;
+        margin: 12px;
+        margin-bottom: 39px;
     }
 
     .img-tours {
-        margin-left: -1.4rem;
+        margin: 2px;
     }
 
 }
