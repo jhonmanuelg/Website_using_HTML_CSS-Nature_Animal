@@ -221,6 +221,7 @@ section {
 }
 
 .col p {
+    width: 82%;
     color: var(--color-text-2);
     text-align: center;
     margin-bottom: 15px;
@@ -263,6 +264,8 @@ section {
 }
 
 .explore-content p {
+    text-align: center;
+    width: 66%;
     color: var(--color-text-1);
     margin-bottom: 40px;
 
